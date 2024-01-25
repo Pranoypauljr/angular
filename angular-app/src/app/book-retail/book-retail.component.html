@@ -1,0 +1,24 @@
+<div class="index-bar">
+<ng-container *ngFor="let bookRetail of bookRetailDetails;let idx=index">
+    <div class="index-bar__item" (click)="ShowBooks(idx)">{{bookRetail.name}}</div>
+</ng-container>
+<!-- <div class="index-bar__item">Jk Rowling</div>
+<div class="index-bar__item">Adarsh R</div>
+<div class="index-bar__item">Nevin George</div>
+<div class="index-bar__item">Pranoy S</div> -->
+</div>
+<div class="books-list" *ngIf="authorBooks.length">
+    <ng-container *ngFor="let authorBook of authorBooks;">
+        <div class="index-bar__item" (click)="ShowBookSummary(authorBook)">{{authorBook}}</div>
+        <!-- <div class="index-bar__item" > -->
+        <!-- </div> -->
+    </ng-container>
+    <div>
+        {{bookSummary}}
+    </div>
+</div>
+
+
+
+
+
